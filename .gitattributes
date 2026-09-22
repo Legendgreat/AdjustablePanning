@@ -7,3 +7,6 @@
 assets/ export-ignore
 README.md export-ignore
 LICENSE export-ignore
+
+.cs export-ignore
+.cs.uid export-ignore
