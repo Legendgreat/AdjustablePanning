@@ -82,14 +82,6 @@ func _tool_menu_handler(index: int) -> void:
 	match index:
 		0:
 			_open_config()
-		# 2:
-		# 	_reload_plugin()
-		_:
-			print("Invalid index.")
-
-# func _reload_plugin() -> void:
-# 	_disconnect_canvas_input()
-# 	_connect_canvas_input()
 	
 func _setup_config_menu() -> void:
 	var editor_settings := EditorInterface.get_editor_settings()
@@ -99,8 +91,6 @@ func _setup_config_menu() -> void:
 
 	if not editor_settings.has_setting(XBUTTON_2_SETTING):
 		editor_settings.set_setting(XBUTTON_2_SETTING, true)
-
-# func _cleanup_config_menu() -> void:
 
 func _open_config() -> void:
 	if is_instance_valid(config_dialog):
