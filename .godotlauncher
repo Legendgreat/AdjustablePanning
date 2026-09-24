@@ -1,0 +1,12 @@
+[config]
+version=1
+
+[launcher]
+version=1.12.0
+project_name="Adjustable Panning"
+
+[editor]
+channel=official
+flavor=dotnet
+base_version=4.7
+version=4.7.2-stable
