@@ -1,12 +1,6 @@
-﻿* text=auto
+﻿* text=auto eol=lf
 
-.gitignore export-ignore
-.gitattributes export-ignore
-.github/ export-ignore
-
-assets/ export-ignore
-README.md export-ignore
-LICENSE export-ignore
-
-*.cs export-ignore
-*.cs.uid export-ignore
+/** export-ignore
+/addons !export-ignore
+/addons/** !export-ignore
+/addons/**/*.cs export-ignore
