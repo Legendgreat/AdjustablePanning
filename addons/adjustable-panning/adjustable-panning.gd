@@ -19,16 +19,6 @@ var config_dialog: AcceptDialog
 var xbutton1_check_box: CheckBox
 var xbutton2_check_box: CheckBox
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		var mouse_button := event as InputEventMouseButton
-
-		if mouse_button.button_index == MOUSE_BUTTON_MIDDLE:
-			print(
-					"PLUGIN INPUT MB3: ",
-					mouse_button.position
-			)
-
 func _enter_tree() -> void:
 	_connect_viewport_inputs()
 	_add_tool_submenu()
@@ -42,8 +32,6 @@ func _exit_tree() -> void:
 func _on_viewport_gui_input(event: InputEvent, viewport: Control) -> void:
 	if not event is InputEventMouseButton:
 		return
-	
-	print(viewport.get_class(), ": ", event)
 
 	if not _is_configured_button(event.button_index):
 		return
@@ -158,8 +146,6 @@ func _open_config() -> void:
 	config_dialog.canceled.connect(_cleanup_config_menu)
 	
 	config_dialog.popup_centered()
-	
-	print(viewport_dict)
 
 func _save_settings() -> void:
 	EditorInterface.get_editor_settings().set_setting(
